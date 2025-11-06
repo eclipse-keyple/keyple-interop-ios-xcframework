@@ -2,17 +2,17 @@
 import PackageDescription
 
 let package = Package(
-   name: "keyple-interop-jsonapi-client-ioslib",
+   name: "KeypleInterop",
    platforms: [
      .iOS(.v14),
    ],
    products: [
-      .library(name: "keyple-interop-jsonapi-client-ioslib", targets: ["keyple-interop-jsonapi-client-ioslib"])
+      .library(name: "KeypleInterop", targets: ["KeypleInterop"])
    ],
    targets: [
       .binaryTarget(
-         name: "keyple-interop-jsonapi-client-ioslib",
-         url: "https://github.com/tdassonville/keyple-interop-jsonapi-client-ios/releases/download/0.16.0/keyple_interop_jsonapi_client_ioslib.xcframwork.zip",
-         checksum:"9a2e8c6ebe0415ac2e22e2d7fd11fbeb031f0dbf5d7d62d34ef494eb03f1ad55")
+         name: "KeypleInterop",
+         url: "https://github.com/jeanpierrefortune/keyple.keyple-interop-jsonapi-client-nfc-xcframework/releases/download/1.0.0/KeypleInterop-1.0.0-xcframework.zip",
+         checksum: "2fe7620b049c1337cb0b4a77e573b242133cec04b0b5b6a3d901c1be4b1039aa") // Generated on 2025-10-14 14:22:13
    ]
 )

@@ -1,26 +1,18 @@
 import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
 
 ///////////////////////////////////////////////////////////////////////////////
-// GRADLE CONFIGURATION
+//  GRADLE CONFIGURATION
 ///////////////////////////////////////////////////////////////////////////////
 
 plugins {
   alias(libs.plugins.kotlinMultiplatform)
   alias(libs.plugins.kotlinSerialization)
   alias(libs.plugins.spotless)
-  alias(libs.plugins.dokka)
-  signing
-  `maven-publish`
 }
 
-tasks {
-  spotless {
-    kotlinGradle {
-      target("**/*.kts")
-      ktfmt()
-    }
-  }
-}
+///////////////////////////////////////////////////////////////////////////////
+//  APP CONFIGURATION
+///////////////////////////////////////////////////////////////////////////////
 
 kotlin {
   if (System.getProperty("os.name").lowercase().contains("mac")) {
@@ -62,5 +54,22 @@ kotlin {
       }
     }
   }
+}
 
+///////////////////////////////////////////////////////////////////////////////
+//  STANDARD CONFIGURATION FOR KOTLIN-LIB MULTIPLATFORM PROJECTS
+///////////////////////////////////////////////////////////////////////////////
+
+tasks {
+  spotless {
+    kotlin {
+      target("src/**/*.kt")
+      licenseHeaderFile("${project.rootDir}/LICENSE_HEADER")
+      ktfmt()
+    }
+    kotlinGradle {
+      target("**/*.kts")
+      ktfmt()
+    }
+  }
 }
