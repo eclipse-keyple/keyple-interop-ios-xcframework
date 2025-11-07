@@ -9,21 +9,21 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  ************************************************************************************** */
-package org.eclipse.keyple.interop.jsonapi.client.ioslib
+package org.eclipse.keyple.interop.ioslib
 
 import io.github.aakira.napier.Antilog
 import io.github.aakira.napier.DebugAntilog
 import io.github.aakira.napier.Napier
 
 /**
- * Provides utility methods to configure logging for the Keyple JSON API using the Napier logging
- * library.
+ * Provides utility methods to configure logging for the Keyple Interop library using the Napier
+ * logging library.
  *
  * This class includes methods for enabling debug logs and for setting a custom logger.
  *
  * @since 1.0.0
  */
-class KeypleJsonApiLogs {
+class KeypleInteropLogs {
   companion object {
     /**
      * Enables debug logging using the Napier logging library.
