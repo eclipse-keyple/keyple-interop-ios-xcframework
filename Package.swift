@@ -13,6 +13,6 @@ let package = Package(
       .binaryTarget(
          name: "KeypleInterop",
          url: "https://github.com/eclipse-keyple/keyple-interop-ios-xcframework/releases/download/1.0.0/KeypleInterop-1.0.0-xcframework.zip",
-         checksum: "79194fa4f421cd93a83c4ddea99376a99cf179a9cdfb32b270339dd5f1e06f05") // Generated on 2025-11-06 14:36:13
+         checksum: "55283aaf0965abd8cdd50963ce629979d12fe02197be2ad5a182abf0ef3210af") // Generated on 2025-11-12 08:53:43
    ]
 )
